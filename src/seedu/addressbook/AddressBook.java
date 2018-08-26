@@ -137,7 +137,7 @@ public class AddressBook {
     private static final String COMMAND_DELETEMULTIPLE_WORD = "deleteM";
     private static final String COMMAND_DELETEMULTIPLE_DESC = "Deletes people identified by their comma seperated index numbers used in the last find/list call.";
     private static final String COMMAND_DELETEMULTIPLE_PARAMETER = "COMMER SEPERATED INDEXES";
-    private static final String COMMAND_DELETEMULTIPLE_EXAMPLE = COMMAND_DELETEMULTIPLE_WORD + "1,2,3";
+    private static final String COMMAND_DELETEMULTIPLE_EXAMPLE = COMMAND_DELETEMULTIPLE_WORD + " 1,2,3";
 
     private static final String DIVIDER = "===================================================";
 
@@ -1109,6 +1109,7 @@ public class AddressBook {
                 + getUsageInfoForFindCommand() + LS
                 + getUsageInfoForViewCommand() + LS
                 + getUsageInfoForDeleteCommand() + LS
+                + getUsageInfoForDeleteMCommand() + LS
                 + getUsageInfoForClearCommand() + LS
                 + getUsageInfoForExitCommand() + LS
                 + getUsageInfoForHelpCommand();
@@ -1133,6 +1134,13 @@ public class AddressBook {
         return String.format(MESSAGE_COMMAND_HELP, COMMAND_DELETE_WORD, COMMAND_DELETE_DESC) + LS
                 + String.format(MESSAGE_COMMAND_HELP_PARAMETERS, COMMAND_DELETE_PARAMETER) + LS
                 + String.format(MESSAGE_COMMAND_HELP_EXAMPLE, COMMAND_DELETE_EXAMPLE) + LS;
+    }
+
+    /** Returns the string for showing 'deleteM' command usage instruction */
+    private static String getUsageInfoForDeleteMCommand() {
+        return String.format(MESSAGE_COMMAND_HELP, COMMAND_DELETEMULTIPLE_WORD, COMMAND_DELETEMULTIPLE_DESC) + LS
+                + String.format(MESSAGE_COMMAND_HELP_PARAMETERS, COMMAND_DELETEMULTIPLE_PARAMETER) + LS
+                + String.format(MESSAGE_COMMAND_HELP_EXAMPLE, COMMAND_DELETEMULTIPLE_EXAMPLE) + LS;
     }
 
     /** Returns string for showing 'clear' command usage instruction */
