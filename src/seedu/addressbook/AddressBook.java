@@ -390,7 +390,7 @@ public class AddressBook {
         case COMMAND_EXIT_WORD:
             executeExitProgramRequest();
         case COMMAND_DELETEMULTIPLE_WORD:
-            executeDeleteMultiple(commandArgs);
+            return executeDeleteMultiple(commandArgs);
         default:
             return getMessageForInvalidCommandInput(commandType, getUsageInfoForAllCommands());
         }
@@ -599,7 +599,7 @@ public class AddressBook {
      * Sorts the name in address book.
      * @param commandArgs the comma seperated indexes to be deleted
      */
-    private static void executeDeleteMultiple(String commandArgs) {
+    private static String executeDeleteMultiple(String commandArgs) {
         String [] itemsToBeDelete = commandArgs.split(",");
         List<String> listOfItemsToBeDelete = Arrays.asList(itemsToBeDelete);
 
@@ -607,6 +607,7 @@ public class AddressBook {
             executeDeletePerson(item);
         }
 
+        return "DeleteM done";
     }
 
     /*
