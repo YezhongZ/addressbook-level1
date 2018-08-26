@@ -19,6 +19,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
 import java.util.Scanner;
 import java.util.Set;
@@ -134,8 +135,9 @@ public class AddressBook {
     private static final String COMMAND_EXIT_EXAMPLE = COMMAND_EXIT_WORD;
 
     private static final String COMMAND_DELETEMULTIPLE_WORD = "deleteM";
-    private static final String COMMAND_DELETEMULTIPLE_DESC = "deletes multiple people";
-    private static final String COMMAND_DELETEMULTIPLE_EXAMPLE = COMMAND_DELETEMULTIPLE_WORD;
+    private static final String COMMAND_DELETEMULTIPLE_DESC = "Deletes people identified by their comma seperated index numbers used in the last find/list call.";
+    private static final String COMMAND_DELETEMULTIPLE_PARAMETER = "COMMER SEPERATED INDEXES";
+    private static final String COMMAND_DELETEMULTIPLE_EXAMPLE = COMMAND_DELETEMULTIPLE_WORD + "1,2,3";
 
     private static final String DIVIDER = "===================================================";
 
@@ -388,7 +390,7 @@ public class AddressBook {
         case COMMAND_EXIT_WORD:
             executeExitProgramRequest();
         case COMMAND_DELETEMULTIPLE_WORD:
-            executeDeleteMultiple();
+            executeDeleteMultiple(commandArgs);
         default:
             return getMessageForInvalidCommandInput(commandType, getUsageInfoForAllCommands());
         }
@@ -595,9 +597,16 @@ public class AddressBook {
 
     /**
      * Sorts the name in address book.
+     * @param commandArgs the comma seperated indexes to be deleted
      */
-    private static void executeDeleteMultiple() {
-        //TODO：sort by name algo
+    private static void executeDeleteMultiple(String commandArgs) {
+        String [] itemsToBeDelete = commandArgs.split(",");
+        List<String> listOfItemsToBeDelete = Arrays.asList(itemsToBeDelete);
+
+        for (String item: listOfItemsToBeDelete){
+            executeDeletePerson(item);
+        }
+
     }
 
     /*
