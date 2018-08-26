@@ -133,9 +133,9 @@ public class AddressBook {
     private static final String COMMAND_EXIT_DESC = "Exits the program.";
     private static final String COMMAND_EXIT_EXAMPLE = COMMAND_EXIT_WORD;
 
-    private static final String COMMAND_SORTBYNAME_WORD = "sort by name";
-    private static final String COMMAND_SORTBYNAME_DESC = "Sorts the address by name";
-    private static final String COMMAND_SORTBYNAME_EXAMPLE = COMMAND_SORTBYNAME_WORD;
+    private static final String COMMAND_DELETEMULTIPLE_WORD = "deleteM";
+    private static final String COMMAND_DELETEMULTIPLE_DESC = "deletes multiple people";
+    private static final String COMMAND_DELETEMULTIPLE_EXAMPLE = COMMAND_DELETEMULTIPLE_WORD;
 
     private static final String DIVIDER = "===================================================";
 
@@ -387,8 +387,8 @@ public class AddressBook {
             return getUsageInfoForAllCommands();
         case COMMAND_EXIT_WORD:
             executeExitProgramRequest();
-        case COMMAND_SORTBYNAME_WORD:
-            executeSortByName();
+        case COMMAND_DELETEMULTIPLE_WORD:
+            executeDeleteMultiple();
         default:
             return getMessageForInvalidCommandInput(commandType, getUsageInfoForAllCommands());
         }
@@ -596,7 +596,7 @@ public class AddressBook {
     /**
      * Sorts the name in address book.
      */
-    private static void executeSortByName() {
+    private static void executeDeleteMultiple() {
         //TODO：sort by name algo
     }
 
