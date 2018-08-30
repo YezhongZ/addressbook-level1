@@ -94,15 +94,22 @@
 ##########################################################
 # test delete multiple person command
 ##########################################################
+  # adding more data to test for this function
   add AAAA p/1111 e/1111@nus.edu.sg
   add BBBB p/2222 e/2222@nus.edu.sg
   add CCCC p/3333 e/3333@nus.edu.sg
+  
+  # check the existing list of names
   list
   
+  # delete the newly added names
   deleteM 3,4,5
+  
+  # check the list after multiple delete
   list
-
-
+  
+  # delete data that not exist
+  deleteM 8,9,10
 
 ##########################################################
 # test clear command

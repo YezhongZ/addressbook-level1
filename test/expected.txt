@@ -291,13 +291,16 @@
 || 5 persons found!
 || ===================================================
 || Enter command: || [Command entered:  deleteM 3,4,5]
-|| DeleteM done
+|| [Deleted Person: AAAA  Phone Number: 1111  Email: 1111@nus.edu.sg, Deleted Person: BBBB  Phone Number: 2222  Email: 2222@nus.edu.sg, Deleted Person: CCCC  Phone Number: 3333  Email: 3333@nus.edu.sg]
 || ===================================================
 || Enter command: || [Command entered:  list]
 ||      1. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
 ||      2. Dickson Ee  Phone Number: 444444  Email: dickson@nus.edu.sg
 || 
 || 2 persons found!
+|| ===================================================
+|| Enter command: || [Command entered:  deleteM 8,9,10]
+|| [The person index provided is invalid, The person index provided is invalid, The person index provided is invalid]
 || ===================================================
 || Enter command: || [Command entered:  clear]
 || Address book has been cleared!
