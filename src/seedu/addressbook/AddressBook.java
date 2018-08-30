@@ -597,7 +597,7 @@ public class AddressBook {
     }
 
     /**
-     * Sorts the name in address book.
+     * Delete multiple names in address book.
      * @param commandArgs the comma seperated indexes to be deleted
      */
     private static String executeDeleteMultiple(String commandArgs) {
