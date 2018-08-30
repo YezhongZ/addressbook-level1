@@ -604,11 +604,13 @@ public class AddressBook {
         String [] itemsToBeDelete = commandArgs.split(",");
         List<String> listOfItemsToBeDelete = Arrays.asList(itemsToBeDelete);
 
+        ArrayList<String> output = new ArrayList <>();
+
         for (String item: listOfItemsToBeDelete){
-            executeDeletePerson(item);
+            output.add(executeDeletePerson(item));
         }
 
-        return "DeleteM done";
+        return String.valueOf(output);
     }
 
     /*
