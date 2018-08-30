@@ -135,7 +135,8 @@ public class AddressBook {
     private static final String COMMAND_EXIT_EXAMPLE = COMMAND_EXIT_WORD;
 
     private static final String COMMAND_DELETEMULTIPLE_WORD = "deleteM";
-    private static final String COMMAND_DELETEMULTIPLE_DESC = "Deletes people identified by their comma seperated index numbers used in the last find/list call.";
+    private static final String COMMAND_DELETEMULTIPLE_DESC =
+            "Deletes people identified by their comma seperated index numbers used in the last find/list call.";
     private static final String COMMAND_DELETEMULTIPLE_PARAMETER = "COMMER SEPERATED INDEXES";
     private static final String COMMAND_DELETEMULTIPLE_EXAMPLE = COMMAND_DELETEMULTIPLE_WORD + " 1,2,3";
 
