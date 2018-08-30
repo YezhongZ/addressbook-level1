@@ -66,6 +66,10 @@
 || 	Parameters: INDEX
 || 	Example: delete 1
 || 
+|| deleteM: Deletes people identified by their comma seperated index numbers used in the last find/list call.
+||      Parameters: COMMER SEPERATED INDEXES
+||      Example: deleteM 1,2,3
+|| 
 || clear: Clears address book permanently.
 || 	Example: clear
 || 
@@ -265,6 +269,33 @@
 || Enter command: || [Command entered:  list]
 || 	1. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
 || 	2. Dickson Ee  Phone Number: 444444  Email: dickson@nus.edu.sg
+|| 
+|| 2 persons found!
+|| ===================================================
+|| Enter command: || [Command entered:  add AAAA p/1111 e/1111@nus.edu.sg]
+|| New person added: AAAA, Phone: 1111, Email: 1111@nus.edu.sg
+|| ===================================================
+|| Enter command: || [Command entered:  add BBBB p/2222 e/2222@nus.edu.sg]
+|| New person added: BBBB, Phone: 2222, Email: 2222@nus.edu.sg
+|| ===================================================
+|| Enter command: || [Command entered:  add CCCC p/3333 e/3333@nus.edu.sg]
+|| New person added: CCCC, Phone: 3333, Email: 3333@nus.edu.sg
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
+|| 	2. Dickson Ee  Phone Number: 444444  Email: dickson@nus.edu.sg
+|| 	3. AAAA  Phone Number: 1111  Email: 1111@nus.edu.sg
+|| 	4. BBBB  Phone Number: 2222  Email: 2222@nus.edu.sg
+|| 	5. CCCC  Phone Number: 3333  Email: 3333@nus.edu.sg
+|| 
+|| 5 persons found!
+|| ===================================================
+|| Enter command: || [Command entered:  deleteM 3,4,5]
+|| DeleteM done
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+||      1. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
+||      2. Dickson Ee  Phone Number: 444444  Email: dickson@nus.edu.sg
 || 
 || 2 persons found!
 || ===================================================
