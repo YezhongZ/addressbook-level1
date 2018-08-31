@@ -569,7 +569,7 @@ public class AddressBook {
     }
 
     /**
-     * Clears all persons in the address book.
+     * Clears all persons in the address book..
      *
      * @return feedback display message for the operation result
      */
